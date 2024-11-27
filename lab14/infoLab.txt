@@ -1,0 +1,28 @@
+PAUTAS GENERALES
+
+MODEL:
+poner
+implements Serializable a cada clase
+
+CLIENTE:
+necesita jakarta
+NO necesita driver de conexion a bd
+model, interfaces
+
+SERVER:
+necesita driver de conexion a bd
+model, interfaces, implementacion, dbManager
+
+INTERFACES:
+poner: "extends Remote" al nombre de la interfaz: java.rmi.Remote;
+poner: "throws RemoteException" a cada metodo: java.rmi.RemoteException;
+
+IMPLEMENTACION:
+
+poner: "throws RemoteException" a cada metodo: java.rmi.RemoteException;
+poner: "extends UnicastRemoteObject: java.rmi.server.UnicastRemoteObject;
+	- crear un constructor para el MySQL, que reciba un puerto y con "throws RemoteException"
+	- que el constructor use: "super(puerto);"
+
+
+PARA IMPORTAR UN DISCO: http://localhost:8080/GameSoftWS/referencias.disco
